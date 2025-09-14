@@ -113,7 +113,7 @@ def predict():
 
     output = prediction[0,1]
 
-    # Shap Values
+    
     explainer = joblib.load(filename="explainer.bz2")
     shap_values = explainer.shap_values(np.array(final_features))
     shap_img = io.BytesIO()
@@ -254,3 +254,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
